@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    printf("Hello, this code is betty compliant!\n");
-    return (0);
+	printf("Hello, this code is betty compliant!\n");
+	return (0);
 }

@@ -35,6 +35,17 @@ Copy code
 ./hsh
 You should see a terminal prompt ($) indicating that the shell is ready for input.
 
+example use :
+./hsh
+$ls  //this lsit files in that directory
+$pwd //print path
+$clear //clears terminal
+
+challenge:
+WE experienced different challenges like not being able to hard code clear == ctrl + l for example in windows.
+
+However this project helped us a lot to understand how shell works.
+
 Contributing
 
 Contributions are welcome! If you would like to contribute to the project, please follow these steps:

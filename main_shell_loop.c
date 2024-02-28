@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * hsh - main shell loop
+ * hsh - main shell control loop
  * @info: the parameter & return info struct
- * @av: the argument vector from main()
+ * @av: the argument vector
  *
- * Return: 0 on success, 1 on error, or error code
+ * Return: 0 on success
  */
 int hsh(info_t *info, char **av)
 {
@@ -49,8 +49,8 @@ int hsh(info_t *info, char **av)
  *
  * Return: -1 if builtin not found,
  *			0 if builtin executed successfully,
- *			1 if builtin found but not successful,
- *			-2 if builtin signals exit()
+ *			1 if builtin found but unsuccessful,
+ *			-2 if builtin signals exits
  */
 int find_builtin(info_t *info)
 {

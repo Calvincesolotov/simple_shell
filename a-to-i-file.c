@@ -39,11 +39,11 @@ int isalpha_char(int c)
 }
 
 /**
- * _atoi - converts a string to an integer
+ * _string_interger - converts a string to an integer
  * @s: string to convert
  * Return: 0 if no numbers in string, converted number otherwise
  */
-int _atoi(char *s)
+int _string_interger(char *s)
 {
 	int index, sign = 1, flag = 0, output;
 	unsigned int result = 0;

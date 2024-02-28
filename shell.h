@@ -90,13 +90,13 @@ typedef struct builtin
 } builtin_table;
 
 
-/* toem_shloop.c */
+/* shell_looping.c */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void fork_cmd(info_t *);
 
-/* toem_parser.c file */
+/* command utils file */
 int is_executable(info_t *info, char *path);
 char *duplicate_characters(char *path_string, int start, int stop);
 char *find_command_path(info_t *info, char *path_string, char *command);
@@ -108,13 +108,13 @@ int print_putchar(char c);
 int put_to_field(char c, int fd);
 int print_input_string(char *string, int fd);
 
-/* string.c file */
+/* string_one.c file */
 int _strlen(char *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
-/* string1.c file */
+/* string_two.c file */
 char *string_copy(char *dest, char *src);
 char *_str_duplicate(const char *);
 void input_string(char *str);
@@ -141,22 +141,22 @@ int free_memory(void **ptr);
 int interactive_shell(info_t *info);
 int isdelimeter(char c, char *delim);
 int isalpha_char(int c);
-int is_atoi(char *s);
+int _string_interger(char *s);
 
-/* toem_errors1.c */
+/* handle_errors1.c */
 int string_interger(char *s);
 void print_error(info_t *, char *);
 int print_d(int, int);
 char *convert_digit(long int num, int base, int flags);
 void delete_commenting(char *buf);
 
-/* builtin.c file*/
+/* shell_builtin_zero.c file*/
 int exit_shell(info_t *info);
 int change_directory(info_t *info);
 int display_help(info_t *info);
 
 
-/* builtin_one.c */
+/*shell_builtin_one.c */
 int _print_history(info_t *info);
 int _print_alias(list_t *node);
 int _myalias(info_t *info);
@@ -195,7 +195,7 @@ int read_hist_info(info_t *info);
 int build_histo_files(info_t *info, char *buf, int linecount);
 int reformat_history_number(info_t *info);
 
-/*lists.c */
+/*listmanagement.c */
 list_t *add_node_to_start(list_t **head, const char *str, int num);
 list_t *add_node_to_end(list_t **head, const char *str, int num);
 size_t print_list_strings(const list_t *h);

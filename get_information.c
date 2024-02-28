@@ -51,7 +51,7 @@ void set_info_struct(info_t *info, char **av)
  */
 void free_info_struct(info_t *info, int all)
 {
-	ffree(info->argv);
+	_free(info->argv);
 	info->argv = NULL;
 	info->path = NULL;
 	if (all)
@@ -64,7 +64,7 @@ void free_info_struct(info_t *info, int all)
 			free_list(&(info->history));
 		if (info->alias)
 			free_list(&(info->alias));
-		ffree(info->environ);
+		_free(info->environ);
 			info->environ = NULL;
 		free_memory((void **)info->cmd_buf);
 		if (info->readfd > 2)

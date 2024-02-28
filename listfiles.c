@@ -38,7 +38,7 @@ char **print_list_array(list_t *head)
 		return (NULL);
 	for (i = 0; node; node = node->next, i++)
 	{
-		str = malloc(_strlen(node->str) + 1);
+		str = malloc(string_length(node->str) + 1);
 		if (!str)
 		{
 			for (j = 0; j < i; j++)

@@ -57,7 +57,7 @@ char *find_command_path(info_t *info, char *path_string, char *command)
 
 	if (!path_string)
 		return (NULL);
-	if ((_strlen(command) > 2) && starts_with(command, "./"))
+	if ((string_length(command) > 2) && starts_with(command, "./"))
 	{
 		if (is_executable(info, command))
 			return (command);

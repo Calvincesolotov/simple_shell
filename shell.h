@@ -109,7 +109,8 @@ int put_to_field(char c, int fd);
 int print_input_string(char *string, int fd);
 
 /* string_one.c file */
-int _strlen(char *);
+/*int _strlen(char *);*/
+int string_length(char *s);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);

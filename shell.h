@@ -24,7 +24,7 @@
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* converting_numbers() */
+/* convert numbers() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
@@ -42,7 +42,7 @@ extern char **environ;
  * struct liststr - singly linked list
  * @num: the number field
  * @str: a string
- * @next: points to the next node
+ * @next: points to next node
  */typedef struct liststr
 {
 	int num;
@@ -129,10 +129,10 @@ char *_sh_strchr(char *s, char c);
 char **split_strtow(char *, char *);
 char **split_strtow2(char *, char);
 
-/* toem_realloc.c */
-char *_memset(char *, char, unsigned int);
-void ffree(char **);
-void *_realloc(void *, unsigned int, unsigned int);
+/* reallocate.c */
+char *_mem_set(char *s, char b, unsigned int n);
+void _free(char **);
+void *_reallocate_memory(void *, unsigned int, unsigned int);
 
 /*memory.c file*/
 int free_memory(void **ptr);
